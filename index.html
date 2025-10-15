@@ -246,7 +246,7 @@
         <p style="margin:0 0 12px;color:#dffbffcc">Send us the details of your event and we will prepare a custom quote.</p>
         <div style="color:#bfefff7a">📱 0945-118-6830 / 0975-753-0348 • ✉️ deadstring19@gmail.com</div>
       </div>
-      <form onsubmit="event.preventDefault();alert('Thanks — we\'ll contact you soon!');this.reset();">
+      <form id="form" action="https://formspree.io/f/mvgwdarq" method="POST">
         <input name="name" placeholder="Full name" required>
         <input name="contact" placeholder="Phone or WhatsApp" required>
         <input name="email" type="email" placeholder="Email" required>
@@ -273,3 +273,4 @@
   </script>
 </body>
 </html>
+
