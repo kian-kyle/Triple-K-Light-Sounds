@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Triple K Lights & Sounds — Triple the Beats. Triple the Brights.</title>
+  <meta name="description" content="Triple K Lights & Sounds — event sound & lighting for parties, weddings, corporate events and concerts." />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent: #00e5ff;
+      --accent-2: #8b00ff;
+      --bg-dark: #040406;
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.04);
+      --max-width: 1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      color:#fff;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(0,230,255,0.06), transparent 6%),
+                  radial-gradient(1000px 500px at 90% 90%, rgba(139,0,255,0.04), transparent 6%),
+                  url('https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1600&q=80') center/cover fixed no-repeat,
+                  var(--bg-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+    /* top nav */
+    nav{position:fixed;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;z-index:60;background:linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.12));backdrop-filter:blur(6px);border-bottom:1px solid rgba(0,229,255,0.06)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo img{
+        width:44px;
+        height:44px;
+        border-radius:8px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+    }
+    .brand h4{margin:0;font-size:1rem;letter-spacing:0.6px}
+    .nav-links{display:flex;gap:18px}
+    .nav-links a{color:var(--accent);text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:#fff}
+    .hero{min-height:86vh;display:grid;grid-template-columns:1fr 460px;align-items:center;gap:40px;padding:120px 24px 60px;max-width:var(--max-width);margin:0 auto}
+    .hero-left h1{font-family:'Orbitron';font-size:3rem;line-height:1;letter-spacing:0.5px;margin:0 0 12px;color:var(--accent);text-shadow:0 6px 30px rgba(0,229,255,0.06)}
+    .hero-left p{margin:0 0 18px;color:#e9f9ffcc;font-size:1.05rem}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#001;padding:12px 18px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:12px 18px;border-radius:10px}
+    .hero-right{background:linear-gradient(180deg,var(--glass),transparent);padding:22px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.6);backdrop-filter:blur(6px)}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .feature-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#031}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .service-card{background:var(--glass-2);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    h3.section-title{color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:40px 0 12px}
+
+    /* about */
+    .about{max-width:var(--max-width);margin:20px auto;padding:30px 24px;display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center}
+    .about .text p{color:#e6f8ffcc}
+    .stats{display:flex;gap:18px;margin-top:18px}
+    .stat{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;min-width:120px;text-align:center}
+
+    /* services section */
+    .services-section{max-width:var(--max-width);margin:30px auto;padding:24px}
+    .services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .services-list .card{background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);padding:18px;border-radius:12px}
+
+    /* clients logos */
+    .clients{max-width:var(--max-width);margin:30px auto;padding:24px;}
+    .clients-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center}
+    .client{width:140px;height:72px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;border-radius:8px}
+
+    /* gallery */
+    .gallery{max-width:var(--max-width); auto;padding:15px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+
+    /* gallery */
+    .gallery2{max-width:var(--max-width);margin:30px auto;padding:24px}
+    .gallery-grid-title h4{
+      margin-top: 10px;
+    }
+
+    /* contact */
+    .contact{max-width:var(--max-width);margin:40px auto;padding:28px 24px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;gap:24px;align-items:center}
+    .contact form{flex:1;display:grid;gap:10px}
+    input,textarea,select{padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.2);color:#fff}
+    button[type=submit]{background:var(--accent);border:none;padding:12px 16px;border-radius:8px;color:#001;font-weight:700;cursor:pointer}
+
+    footer{padding:22px;text-align:center;color:#bfefff7a}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;padding-top:160px}
+      .about{grid-template-columns:1fr}
+      .hero-right{order:2}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav{padding:10px}
+      .nav-links{display:none}
+      .hero-left h1{font-size:2.1rem}
+      .services-grid{grid-template-columns:1fr}
+    }
+
+    /* small animated accents */
+    .pulse{animation:pulse 2s infinite ease-in-out}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">
+      <div class="logo">
+        <img src="logo.png" alt="Triple K Lights & Sounds">
+      </div>
+      <h4>Triple K Lights & Sounds</h4>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-left">
+      <h1>Triple K Lights & Sounds</h1>
+      <p class="lead">“Triple the Beats. Triple the Brights.”<br>
+        Bring your event to life with electrifying sounds and dazzling lights that set the perfect mood! From parties and weddings to corporate events and concerts, Triple K delivers top-quality audio, stunning lighting effects, and an unforgettable atmosphere.</p>
+      <div class="cta">
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+        <a class="btn-outline" href="#services">See Services</a>
+      </div>
+
+      <div style="margin-top:22px;color:#dffbffcc;">
+        <strong>Why choose Triple K?</strong>
+        <ul style="text-align:left;max-width:680px;margin:10px 0 0 0;padding-left:18px;color:#dffbffcc">
+          <li>Professional-grade equipment and trained crew</li>
+          <li>Custom packages to fit your event size and budget</li>
+          <li>Fast setup and on-site support</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="feature">
+        <div class="feature-icon">🎶</div>
+        <div>
+          <strong>Sound Systems</strong>
+          <div style="font-size:0.95rem;color:#dffbffcc;margin-top:6px">High-fidelity speakers, subwoofers, mixers and professional audio engineers for crystal clear sound.</div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <strong>Dynamic Lighting</strong>
+          <p style="margin:8px 0 0;color:#e9f9ffcc;">Moving heads, wash lights, lasers and atmospheric effects to build mood and drama.</p>
+        </div>
+        <div class="service-card">
+          <strong>DJ & MC</strong>
+          <p style="margin:8px 0 0;color:#e9f9ffcc;">Experienced DJs and MCs to keep the energy and flow of your event.</p>
+        </div>
+        <div class="service-card">
+          <strong>Stage & Rigging</strong>
+          <p style="margin:8px 0 0;color:#e9f9ffcc;">Safe trussing, staging and power distribution for small to large productions.</p>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <div class="text">
+        <h2 class="section-title">About Us</h2>
+        <p>Triple K Lights & Sounds is a full-service event production company that brings energy and polish to every show. Our team of audio and lighting professionals collaborate with clients to design unforgettable experiences — from intimate birthday parties to multi-stage concerts.</p>
+        <p>We combine modern gear with thoughtful planning to ensure your event sounds and looks incredible. Safety, timeliness, and a passion for great events are at the core of everything we do.</p>
+
+        <div class="stats">
+          <div class="stat"><strong>5,000+</strong><div style="font-size:0.85rem;color:#dffbffcc">Attendees entertained</div></div>
+          <div class="stat"><strong>8+</strong><div style="font-size:0.85rem;color:#dffbffcc">Years experience</div></div>
+          <div class="stat"><strong>1000+</strong><div style="font-size:0.85rem;color:#dffbffcc">Events produced</div></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <img src="picture 2.webp" alt="lighting" style="width:100%;border-radius:12px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+        <img src="Pic 2.jpeg" alt="sound" style="width:100%;border-radius:12px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2 class="section-title">Services Offered</h2>
+      <div class="services-list">
+        <div class="card"><strong>Party Packages</strong><p style="margin-top:8px;color:#e9f9ffcc">Custom DJ + lights packages for birthdays, debuts & reunions.</p></div>
+        <div class="card"><strong>Weddings</strong><p style="margin-top:8px;color:#e9f9ffcc">Ceremony audio, romantic lighting, and reception sound that keeps the dancefloor alive.</p></div>
+        <div class="card"><strong>Corporate Events</strong><p style="margin-top:8px;color:#e9f9ffcc">Conferences, product launches, AV support and stage setup with professional technicians.</p></div>
+        <div class="card"><strong>Concerts & Festivals</strong><p style="margin-top:8px;color:#e9f9ffcc">Full production rigs, multi-zone audio and lighting design for live music.</p></div>
+        <div class="card"><strong>Lighting Design</strong><p style="margin-top:8px;color:#e9f9ffcc">Themed lighting, intelligent cues, and programmable looks to match your vision.</p></div>
+        <div class="card"><strong>Equipment Rental</strong><p style="margin-top:8px;color:#e9f9ffcc">Speakers, mics, mixers, lights and accessories available for hire with delivery.</p></div>
+      </div>
+    </section>
+
+
+    <section class="gallery2">
+      <h2 class="section-title" style="margin-bottom: 10px;">Trusted By</h2>
+      <div class="gallery-grid">
+        <div class="gallery-grid-title">
+          <h4 style="text-align: center;">Cerebro</h4>
+          <img src="Cerebro.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        </div>
+        <div>
+          <h4 style="text-align: center;">Leyte Provincial Capitol</h4>
+          <img src="Province.jpeg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        </div>
+        <div>
+          <h4 style="text-align: center;">R&M Bridal</h4>
+          <img src="R&M.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        </div>
+        <div>
+          <h4 style="text-align: center;">Palo 1 Central School</h4>
+          <img src="Palo Central.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery2">
+      <h2 class="section-title">Event Gallery</h2>
+      <div class="gallery-grid">
+        <img src="event-seminar.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        <img src="event-birthday.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        <img src="event-debut.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+        <img src="event-graduate.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:10px">
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div style="flex:1">
+        <h2 class="section-title">Get A Quote / Bookings</h2>
+        <p style="margin:0 0 12px;color:#dffbffcc">Send us the details of your event and we will prepare a custom quote.</p>
+        <div style="color:#bfefff7a">📱 0945-118-6830 / 0975-753-0348 • ✉️ deadstring19@gmail.com</div>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Thanks — we\'ll contact you soon!');this.reset();">
+        <input name="name" placeholder="Full name" required>
+        <input name="contact" placeholder="Phone or WhatsApp" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <select name="event">
+          <option value="">-- Select event type --</option>
+          <option>Birthday</option>
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Concert</option>
+        </select>
+        <textarea name="notes" rows="3" placeholder="Event date / venue / expected guests"></textarea>
+        <button type="submit">Request Quote</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Triple K Lights & Sounds • Designed by Koko Noblejas
+  </footer>
+
+  <script>
+    // Small script: mobile nav toggle + smooth scrolldown for brand clicks
+    document.querySelector('.logo').addEventListener('click', ()=>location.href='#home');
+  </script>
+</body>
+</html>
